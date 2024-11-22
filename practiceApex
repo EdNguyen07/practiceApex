@@ -1,0 +1,29 @@
+public class practiceApex{
+    /* Map Class
+* Given a string employeeId a map of string to string employeeIdToEmail that contains employee IDs as keys and the employee's email 
+* address as the value, return the email associated with the passed employeeId. If the employee ID is not found, return 'info@apexsandbox.io'.
+
+* For example, if the map employeeIdToEmail contains the following keys and values:
+
+* '6752' -> 'cooper@corporation.com'
+* '19228' -> 'umair@universalcontainers.com'
+* '4823' -> 'alicia@acmeenterprises.com'
+* The method call employeeEmail(employeeIdToEmail, '4823') should return 'alicia@acmeenterprises.com'.
+*/
+    public static String employeeEmail(Map<String, String> employeeIdToEmail, String employeeId) {
+        //code here
+        for(string s : employeeIdToEmail.keyset()){
+            system.debug(s);
+            if(string.valueOf(s) == employeeId){
+                system.debug(string.valueOf(s));
+                return string.valueOf(employeeIdToEmail.get(s));
+            }
+            
+        }
+        
+        return 'info@apexsandbox.io';
+        
+        
+    }
+}
+
