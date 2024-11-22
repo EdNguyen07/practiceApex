@@ -1,0 +1,34 @@
+List<Contact> contacts = new List<Contact>();
+String contactJson = '{' +
+    '"Name": "John Doe",' +
+    '"FirstName": "John",' +
+    '"LastName": "Doe",' +
+    '"Phone": "1234567890"' +
+    '}';
+contacts.add((Contact)JSON.deserialize(contactJson, Contact.class));
+contactJson = '{' +
+    '"Name": "Jane Doe",' +
+    '"FirstName": "Jane",' +
+    '"LastName": "Doe",' +
+    '"Phone": "9876543210"' +
+    '}';
+contacts.add((Contact)JSON.deserialize(contactJson, Contact.class));
+contactJson = '{' +
+    '"Name": "John Smith",' +
+    '"FirstName": "John",' +
+    '"LastName": "Smith",' +
+    '"Phone": "6824481122"' +
+    '}';
+contacts.add((Contact)JSON.deserialize(contactJson, Contact.class));
+contactJson = '{' +
+    '"Name": "Jane Smith",' +
+    '"FirstName": "Jane",' +
+    '"LastName": "Smith",' +
+    '"Phone": "2142983874"' +
+    '}';
+contacts.add((Contact)JSON.deserialize(contactJson, Contact.class));
+
+Map<String, String> result = practiceApex.phonebook(contacts);
+system.debug(result);
+Set<String> names = new Set<String> {'John Doe', 'Jane Doe', 'John Smith', 'Jane Smith'};
+    
